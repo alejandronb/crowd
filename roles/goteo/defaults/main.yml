@@ -6,6 +6,9 @@ apt_packages:
   - composer
   - grunt
   - npm
+  - ruby
+  - sass
+  - ruby-compass
 
 
 goteo_dir: "/srv/goteo"
