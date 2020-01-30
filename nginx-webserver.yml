@@ -22,8 +22,8 @@
             web_server:
               locations:
                 default:
-                  location: /srv/goteo/dist/index.php
-                  html_file_location: /usr/share/nginx/html
-                  html_file_name: index.html
+                  location: /
+                  html_file_location: /srv/goteo/dist
+                  html_file_name: index.php
                   autoindex: false
               http_demo_conf: false
