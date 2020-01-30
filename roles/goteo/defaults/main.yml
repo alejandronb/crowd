@@ -5,6 +5,7 @@
 apt_packages:
   - composer
   - grunt
+  - npm
 
 
 goteo_dir: "/srv/goteo"
