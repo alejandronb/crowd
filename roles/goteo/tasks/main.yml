@@ -1,0 +1,30 @@
+---
+- git:
+    repo: 'https://github.com/GoteoFoundation/goteo'
+    dest: "{{ goteo_dir }}"
+    # version: release-0.22
+
+
+# Downloads and installs all the libs and dependencies outlined in the /path/to/project/composer.lock
+- composer:
+    command: install
+    working_dir: "{{ goteo_dir }}"
+
+
+- name: Install packages based on package.json.
+  npm:
+    path: "{{ goteo_dir }}"
+
+
+- name: Copy file with owner and permissions
+  copy:
+    src: /demo-settings.yml
+    dest: "{{ goteo_dir }}/config"
+    owner: foo
+    group: foo
+    mode: '0644'
+
+  
+- name: Remove service
+  shell: "grunt build:dist"
+  # when: (existing_service.rc == 0) and recreate_service

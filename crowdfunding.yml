@@ -1,0 +1,10 @@
+---
+- hosts: goteo[0]
+  become: yes
+  roles:
+    - geerlingguy.php
+    - nginxinc.nginx
+    - geerlingguy.mysql
+    - host-requirements
+    - goteo
+    

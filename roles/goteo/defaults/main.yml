@@ -1,0 +1,10 @@
+---
+# disable_selinux: yes
+# disable_firewall: yes
+
+apt_packages:
+  - composer
+  - grunt
+
+
+goteo_dir: "/srv/goteo"
